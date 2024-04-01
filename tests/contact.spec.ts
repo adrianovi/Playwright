@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import ContactPage from '../pages/contact.page';
+import { faker } from '@faker-js/faker';
 
 test.describe('Contact', () => {
     let contactPage: ContactPage;
@@ -8,7 +9,7 @@ test.describe('Contact', () => {
         contactPage = new ContactPage(page);
         await contactPage.navigate();
 
-        await contactPage.submitForm('Joe', 'joe@email.com', '123456', 'lorep ipsum');
+        await contactPage.submitForm(faker.person.fullName(), faker.internet.email(), faker.phone.number(), faker.lorem.paragraph(2));
 
         // open inspector
         // await page.pause();
