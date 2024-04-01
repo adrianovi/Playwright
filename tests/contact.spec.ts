@@ -2,14 +2,13 @@ import { test, expect } from '@playwright/test';
 import ContactPage from '../pages/contact.page';
 
 test.describe('Contact', () => {
-    const { faker } = require('@faker-js/faker');
     let contactPage: ContactPage;
     
     test('Exercise 1', async ({ page }) => {
         contactPage = new ContactPage(page);
         await contactPage.navigate();
 
-        await contactPage.submitForm(faker.person.fullName(), faker.internet.email(), faker.phone.number(), faker.lorem.paragraph(2));
+        await contactPage.submitForm('Joe', 'joe@email.com', '123456', 'lorep ipsum');
 
         // open inspector
         // await page.pause();
