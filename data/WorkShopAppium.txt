@@ -1,0 +1,7 @@
+https://github.com/appium/appium-inspector/releases
+ANDROID_HOME = %USERPROFILE%\AppData\Local\Android\Sdk
+JAVA_HOME
+
+3 Add paths: 3 paths
+
+https://github.com/sebasonti/gui-automation-csharp
